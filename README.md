@@ -1,21 +1,41 @@
-# YamlElixir
+# Example of Cowboy on Elixir
 
-**TODO: Add description**
+I made a try to draft an example of the simple service with cowboy on elixir.
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `yaml_elixir` to your list of dependencies in `mix.exs`:
+## Cowboy request
 
 ```elixir
-def deps do
-  [
-    {:yaml_elixir, "~> 0.1.0"}
-  ]
-end
+%{
+  bindings: %{},
+  body_length: 0,
+  cert: :undefined,
+  has_body: false,
+  headers: %{
+    "accept" => "*/*",
+    "host" => "localhost:3700",
+    "user-agent" => "curl/8.0.1"
+  },
+  host: "localhost",
+  host_info: :undefined,
+  method: "GET",
+  path: "/",
+  path_info: :undefined,
+  peer: {{127, 0, 0, 1}, 37334},
+  pid: _pid,
+  port: 3700,
+  qs: "",
+  ref: :yamlapi,
+  scheme: "http",
+  sock: {{127, 0, 0, 1}, 3700},
+  streamid: 1,
+  version: :"HTTP/1.1"
+}
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/yaml_elixir>.
+## Manually testing
 
+```
+% curl -vv 'http://localhost:3700/rest?cover=25&dat=begs'
+% curl -vv 'http://localhost:3700/
+% curl -vv -X PUT 'http://localhost:3700/rest'
+```

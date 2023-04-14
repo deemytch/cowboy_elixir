@@ -1,0 +1,2 @@
+defmodule CowboyElixir do
+end

@@ -1,27 +1,21 @@
-defmodule YamlElixir.MixProject do
+defmodule CowboyElixir.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :yaml_elixir,
+      app: :cowboy_elixir,
       version: "0.1.0",
-      elixir: "~> 1.13",
+      elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: [ cowboy: "~> 2.9.0" ]
     ]
   end
 
-  # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger, :yaml_elixir]
+      extra_applications: [:logger],
+      mod: {CowboyElixir.Application, []}
     ]
   end
 
-  # Run "mix help deps" to learn about dependencies.
-  defp deps do
-    [
-      yaml_elixir: "~> 2.9"
-    ]
-  end
 end
