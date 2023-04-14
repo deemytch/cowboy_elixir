@@ -23,10 +23,10 @@ defmodule CowboyElixir.Application do
       ]}] )
 
     %{
-      id: :yamlapi,
+      id: :cowboy_elixir,
       start: {
         :cowboy, :start_clear, [
-          :yamlapi,
+          :cowboy_elixir,
           %{max_connections: 999999, socket_opts: [port: 3700]},
           %{max_keepalive: 1000, env: %{ dispatch: routes }}
       ]},

@@ -7,8 +7,11 @@ defmodule CowboyElixir.MixProject do
       version: "0.1.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
-      deps: [ cowboy: "~> 2.9.0" ]
-    ]
+      deps: [
+        cowboy: "~> 2.9",
+        ymlr: "~> 3.0",
+        json: "~> 1.4"
+    ]]
   end
 
   def application do
