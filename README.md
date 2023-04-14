@@ -2,6 +2,16 @@
 
 I made a try to draft an example of the simple service with cowboy on elixir.
 
+## Manually testing
+
+`iex -S mix`
+
+```
+% curl -vv 'http://localhost:3700/rest?cover=25&dat=begs'
+% curl -vv 'http://localhost:3700/
+% curl -vv -X PUT 'http://localhost:3700/rest'
+```
+
 ## Cowboy request
 
 ```elixir
@@ -32,10 +42,3 @@ I made a try to draft an example of the simple service with cowboy on elixir.
 }
 ```
 
-## Manually testing
-
-```
-% curl -vv 'http://localhost:3700/rest?cover=25&dat=begs'
-% curl -vv 'http://localhost:3700/
-% curl -vv -X PUT 'http://localhost:3700/rest'
-```
